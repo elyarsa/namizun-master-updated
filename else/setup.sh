@@ -12,7 +12,7 @@ fi
 echo 'start redis service'
 systemctl start redis.service
 if [ $? == 0 ]; then
-  echo 'redis servie started'
+  echo 'redis service started'
 else
   echo 'service starting failed'
   exit
@@ -24,7 +24,7 @@ mkdir -p /var/www/namizun && cd /var/www/namizun
 echo 'Pulling the repository (step 3)'
 git init
 git remote add origin https://github.com/elyarsa/namizun-master-updated.git
-git pull origin master
+git pull origin main
 if [ $? != 0 ]; then
   echo 'could not clone the repository'
   exit
